@@ -2,7 +2,8 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/screens/Home';
 import SingleUser from './components/screens/SingleUser';
-
+import CreateUser from './components/screens/Newuser';
+import EditUser from './components/screens/EditUser';
 const App = () => {
   console.log('App component rendered');
 
@@ -11,8 +12,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/user/:id" element={<SingleUser />} />
+        <Route path="/createUser" element={<CreateUser />} />
+        <Route path="/edituser/:id" element={<EditUser />} />
       </Routes>
-      
+
     </>
   );
 };
@@ -93,4 +96,3 @@ export default App;
 // };
 
 // export default App;
-    
